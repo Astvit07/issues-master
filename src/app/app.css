@@ -1,31 +1,108 @@
-.Cc{
+.Cc {
     border: 1px solid red;
 }
 
-.todo-list-wrapper{
+body {
+    font-family: sans-serif;
+}
+
+.todo-list-wrapper {
     border: 1px solid #d4d3d7;
     border-radius: 5px;
 }
 
-.todo-list-wrapper .todo-list-item{
+.todo-list-wrapper .todo-list-item:hover {
+    background-color: #f5f9f9;
+}
+
+.todo-list-wrapper .todo-list-item {
     display: flex;
     padding: 10px 15px;
     border-bottom: 1px solid #e3e2e4;
 }
-.todo-list-wrapper .todo-list-item:last-child{
+
+.todo-list-wrapper .todo-list-item:last-child {
     border-bottom: unset;
 }
 
-.section-icon-status{
+.section-icon-status {
+    color: green;
 }
 
-.section-content{
+
+.section-content a {
+    color: inherit;
+}
+
+.section-content a:hover {
+    text-decoration: unset;
+}
+
+.section-content .box-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.section-content .box-title h4 {
+    font-weight: bold;
+    font-size: 18px;
+    padding-right: 5px;
+    margin-bottom: 0;
+}
+
+.section-content .box-data {
+    color: #827c7c;
+    font-size: 13px;
+}
+
+.section-content {
+    padding-left: 10px;
+    padding-right: 10px;
     -ms-flex: 0 0 80%;
     flex: 0 0 80%;
     max-width: 80%;
 }
-.section-notification{
+
+.section-notification {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+}
+
+.tally {
+    background-color: darkblue;
+    font-weight: 600;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.tally.-dev {
+    border: 1px solid #89a6eb;
+    background-color: #86b5ec;
+    color: inherit;
+}
+
+.tally.-bug {
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+.tally.-fixed {
+    background-color: #01fe64;
+    border: 1px solid #58c88a;
+    color: inherit;
+}
+
+.tally.-question {
+    background-color: #d8016a;
+    border: 1px solid #892a60;
+}
+
+.btn.custom {
+    padding: 0;
+    height: 20px;
 }
