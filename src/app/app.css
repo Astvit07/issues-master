@@ -1,0 +1,31 @@
+.Cc{
+    border: 1px solid red;
+}
+
+.todo-list-wrapper{
+    border: 1px solid #d4d3d7;
+    border-radius: 5px;
+}
+
+.todo-list-wrapper .todo-list-item{
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e3e2e4;
+}
+.todo-list-wrapper .todo-list-item:last-child{
+    border-bottom: unset;
+}
+
+.section-icon-status{
+}
+
+.section-content{
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.section-notification{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
