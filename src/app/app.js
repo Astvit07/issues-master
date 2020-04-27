@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import './app.css';
+import Tally from "../tally/tally";
 
 
 export default class App extends Component {
@@ -34,7 +35,7 @@ export default class App extends Component {
                                         Question: How to set ripple color for lconButton?
                                     </h4>
                                 </a>
-                                <span className="tally -question">Question</span>
+                                <Tally variant={'question'} text={'question'}/>
                             </div>
                             <div className="box-data">
                                 #616 opened 15 hours ago by mam
@@ -81,7 +82,8 @@ export default class App extends Component {
                                         Navigation Drawer List Item Icon color doesn't use theme color when in active
                                         state,
                                         differs from the text color.
-                                        <span className="tally -fixed">Fixed in Upcoming Release</span>
+                                        <Tally variant={'fixed'} text={'Fixed in Upcoming Release'}/>
+
                                     </h4>
                                 </a>
                             </div>
