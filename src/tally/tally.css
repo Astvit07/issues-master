@@ -1,0 +1,31 @@
+.tally {
+    background-color: darkblue;
+    font-weight: 600;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.tally.-dev {
+    border: 1px solid #89a6eb;
+    background-color: #86b5ec;
+    color: inherit;
+}
+
+.tally.-bug {
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+.tally.-fixed {
+    background-color: #01fe64;
+    border: 1px solid #58c88a;
+    color: inherit;
+}
+
+.tally.-question {
+    background-color: #d8016a;
+    border: 1px solid #892a60;
+}

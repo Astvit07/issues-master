@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './app.css';
 import Tally from "../tally/tally";
+import TodoList from "../todo-list/todoList";
 
 
 export default class App extends Component {
@@ -23,84 +24,48 @@ export default class App extends Component {
                     <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
                 </div>
                 {/*+++---+++*/}
-                <div className="todo-list-wrapper">
-                    <div className="todo-list-item">
-                        <div className="section-icon-status">
-                            <i className="fa fa-exclamation-circle"></i>
-                        </div>
-                        <div className="section-content">
-                            <div className="box-title">
-                                <a href="#">
-                                    <h4>
-                                        Question: How to set ripple color for lconButton?
-                                    </h4>
-                                </a>
-                                <Tally variant={'question'} text={'question'}/>
-                            </div>
-                            <div className="box-data">
-                                #616 opened 15 hours ago by mam
-                            </div>
-                        </div>
-                        <div className="section-notification">
-                            <button type="button" className="btn custom ">
-                                <i className="fa fa-comment"></i>
-                            </button>
-                            <span>5</span>
-                        </div>
-                    </div>
-                    <div className="todo-list-item">
-                        <div className="section-icon-status">
-                            <i className="fa fa-exclamation-circle"></i>
-                        </div>
-                        <div className="section-content">
-                            <div className="box-title">
-                                <a href="#">
-                                    <h4>
-                                        Migration to v6 broke the SASS compilation
-                                    </h4>
-                                </a>
-                            </div>
-                            <div className="box-data">
-                                #615 opened 4 days ago by BenMoreton
-                            </div>
-                        </div>
-                        <div className="section-notification">
-                            <button type="button" className="btn custom ">
-                                <i className="fa fa-comment"></i>
-                            </button>
-                            <span>5</span>
-                        </div>
-                    </div>
-                    <div className="todo-list-item">
-                        <div className="section-icon-status">
-                            <i className="fa fa-exclamation-circle"></i>
-                        </div>
-                        <div className="section-content">
-                            <div className="box-title">
-                                <a href="#">
-                                    <h4>
-                                        Navigation Drawer List Item Icon color doesn't use theme color when in active
-                                        state,
-                                        differs from the text color.
-                                        <Tally variant={'fixed'} text={'Fixed in Upcoming Release'}/>
-
-                                    </h4>
-                                </a>
-                            </div>
-                            <div className="box-data">
-                                #602 opened 17 days ago by kintz09
-                            </div>
-                        </div>
-                        <div className="section-notification">
-                            <button type="button" className="btn custom ">
-                                <i className="fa fa-comment"></i>
-                            </button>
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
+                <TodoList />
+                {/*+++---+++*/}
+                <Tally variant={'question'} text={'Hello world'} />
             </main>
         );
     }
 }
 
+
+/**/
+class SwapiService {
+
+    _apiBase ='https://api.github.com/repos/octocat';
+
+    async getResource(url){
+        const res = await fetch(`${this._apiBase}${url}`);
+        if (!res.ok){
+            throw new Error(`Could not fetch ${url}, received ${res.status}`)
+        }
+        return await res.json();
+    }
+    async getAllIssues(){
+        const res = await this.getResource(`/Hello-World/issues`)
+        return res;
+    }
+
+
+    getOneIssues(id){
+        return this.getResource(`/Hello-World/issues/${id}`);
+    }
+
+}
+
+const swapi = new SwapiService();
+
+swapi.getAllIssues().then( (issues) => {
+    issues.forEach((p) =>{
+        console.log(p.number);
+        console.log(p.title);
+    })
+})
+
+swapi.getOneIssues(540).then( (body) => {
+    console.log(body.number);
+})
