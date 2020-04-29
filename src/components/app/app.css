@@ -3,36 +3,16 @@
 }
 
 body {
-    font-family: sans-serif;
-}
-
-
-
-.todo-list-wrapper .todo-list-item:hover {
-    background-color: #f5f9f9;
-}
-
-.todo-list-wrapper .todo-list-item {
-    display: flex;
-    padding: 10px 15px;
-    border-bottom: 1px solid #e3e2e4;
-}
-
-.todo-list-wrapper .todo-list-item:last-child {
-    border-bottom: unset;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #fff;
 }
 
 .section-icon-status {
     color: green;
 }
 
-
 .section-content a {
     color: inherit;
-}
-
-.section-content a:hover {
-    text-decoration: unset;
 }
 
 .section-content .box-title {
@@ -54,8 +34,8 @@ body {
 }
 
 .section-content {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     -ms-flex: 0 0 80%;
     flex: 0 0 80%;
     max-width: 80%;
@@ -67,6 +47,19 @@ body {
     flex-grow: 1;
 }
 
+.section-notification a{
+    color: #586069;
+}
+
+.section-notification a:hover{
+    color: #0366d6;
+    text-decoration: unset;
+}
+.section-notification a:hover{
+    color: #0366d6;
+    fill: #0366d6;
+    text-decoration: unset;
+}
 
 .btn.custom {
     padding: 0;

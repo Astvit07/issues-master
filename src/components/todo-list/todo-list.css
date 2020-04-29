@@ -1,4 +1,42 @@
-.todo-list-wrapper {
-    border: 1px solid #d4d3d7;
-    border-radius: 5px;
+.issues-wrapper {
+    border: 1px solid #d1d5da;;
+    border-radius: 3px;
+}
+.issues-wrapper .issues-box:first-child{
+    border-top: unset;
+}
+.issues-wrapper .issues-box:hover{
+    background-color: #f6f8fa;
+}
+.issues-wrapper .issues-box{
+    display: flex;
+    border-top: 1px solid #e1e4e8;
+    padding: 8px 16px;
+}
+.issues-wrapper .issues-box .box-title{
+    font-size: 16px;
+    line-height: 20px;
+    color: #24292e;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+
+.issues-wrapper .issues-box .box-data{
+    font-size: 12px;
+}
+
+.issues-wrapper .issues-box {}
+.issues-wrapper .issues-box {}
+.issues-wrapper .issues-box .section-content a:hover {
+    text-decoration: unset;
+    color: #0366d6;
+}
+
+
+.icon svg{
+    fill: #28a745!important;
+}
+.icon {
+    margin-top: -2px;
+    display: block;
 }

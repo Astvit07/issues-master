@@ -1,4 +1,4 @@
-export default class SwapiService {
+export default class GitHubApiService {
 
     _apiBase ='https://api.github.com/repos/octocat';
 
