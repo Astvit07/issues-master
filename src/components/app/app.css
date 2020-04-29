@@ -36,9 +36,9 @@ body {
 .section-content {
     padding-left: 8px;
     padding-right: 8px;
-    -ms-flex: 0 0 80%;
-    flex: 0 0 80%;
-    max-width: 80%;
+    -ms-flex: 0 0 85%;
+    flex: 0 0 85%;
+    max-width: 85%;
 }
 
 .section-notification {
