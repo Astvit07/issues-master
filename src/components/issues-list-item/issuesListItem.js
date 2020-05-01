@@ -1,8 +1,8 @@
 import React from "react";
-import './todo-list-item.css';
+import './issues-list-item.css';
 import Tally from "../tally/tally";
 
-const TodoListItem = () => {
+const IssuesListItem = () => {
     return (
         <div className="todo-list-item">
             <div className="section-icon-status">
@@ -32,4 +32,4 @@ const TodoListItem = () => {
     );
 }
 
-export default TodoListItem;
+export default IssuesListItem;

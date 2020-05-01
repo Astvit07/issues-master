@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import './search-block.css'
+import './search-panel.css'
 
-export default class SearchBlock extends Component{
+export default class SearchPanel extends Component{
     render() {
         return (
             <div className="search-block d-flex flex-justify-start flex-auto width-full my-4" role="search">
@@ -51,9 +51,9 @@ export default class SearchBlock extends Component{
                 </details>
                 <form className="subnav-search" data-pjax="true" role="search" aria-label="Issues"
                       action="" accept-charset="UTF-8" method="get">
-                    <input type="text"  value=""
+                    <input type="text"
                            className="form-control"
-                           placeholder="Search all issues" aria-label="Search all issues" />
+                           placeholder="Search all issues" />
                     <svg className="octicon octicon-search subnav-search-icon" viewBox="0 0 16 16" version="1.1"
                          width="16" height="16" aria-hidden="true">
                         <path fill-rule="evenodd"

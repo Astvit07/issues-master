@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import './app.css';
 import Tally from "../tally/tally";
-import TodoList from "../todo-list/todoList";
-import SearchBlock from "../searchBlock/searchBlock";
+import IssuesList from "../issues-list/issuesList";
+import SearchPanel from "../searchPanel/searchPanel";
 
 export default class App extends Component {
     render() {
@@ -10,9 +10,9 @@ export default class App extends Component {
             <main className="container">
                 <div className="row justify-content-center">
                     <div className="col-10">
-                        <SearchBlock />
+                        <SearchPanel />
                         {/*+++---+++*/}
-                        <TodoList/>
+                        <IssuesList/>
                     </div>
                 </div>
 

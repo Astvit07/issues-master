@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './todo-list.css';
+import './issues-list.css';
 import GitHubApiService from "../../services/GitHubApi-services";
 import Tally from "../tally/tally";
 import Status from "../status/Status";
@@ -7,7 +7,7 @@ import NotificationComments from "../notificationComments/NotificationComments";
 import NotificationPull from "../notificationPull/NotificationPull";
 import RelativeTime from "../relativeTime/RelativeTime";
 
-export default class TodoList extends Component {
+export default class IssuesList extends Component {
     gitHubApi = new GitHubApiService();
     state = {
         issuesList: []
