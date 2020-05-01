@@ -5,6 +5,7 @@ import Tally from "../tally/tally";
 import Status from "../status/Status";
 import NotificationComments from "../notificationComments/NotificationComments";
 import NotificationPull from "../notificationPull/NotificationPull";
+import RelativeTime from "../relativeTime/RelativeTime";
 
 export default class TodoList extends Component {
     gitHubApi = new GitHubApiService();
@@ -27,7 +28,7 @@ export default class TodoList extends Component {
             return (
                 <div className="issues-box">
                     <div className="section-icon-status">
-                        <Status state={info.state} />
+                        <Status state={info.state}/>
                     </div>
                     <div className="section-content">
                         <div className="box-title">
@@ -38,17 +39,14 @@ export default class TodoList extends Component {
                         <div className="box-data">
                             {info.number} opened
 
-                            <relative-time datetime={info.created_at} className="no-wrap"
-                                           title="15 апр. 2020 г., 10:51 GMT+3">
-                                {info.created_at}
-                            </relative-time>
+                            <RelativeTime time={info.updated_at} />
 
-                            by {info.user.login}
+                            by <a href={info.user.html_url}>{info.user.login}</a>
                         </div>
                     </div>
                     <div className="section-notification justify-content-between">
-                        <NotificationPull link={info.pull_request} />
-                        <NotificationComments comment={info.comments} link={info.comments_url} />
+                        <NotificationPull link={info.pull_request}/>
+                        <NotificationComments comment={info.comments} link={info.comments_url}/>
                     </div>
                 </div>
             );
